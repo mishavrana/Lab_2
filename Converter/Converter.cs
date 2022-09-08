@@ -10,10 +10,10 @@ public class Converter
         get { return yourCurrensy; }
     }
 
-    // Stores types of currensy that matches only fields that are presented in 'Converter' class 
+    // Stores types of currency that matches only fields that are presented in 'Converter' class 
     public enum Currensy
     {
-        usd, eur, rub
+        Usd, Eur, Rub
     }
 
     public Converter(double usdValue, double eurValue, double rubValue, string yourCurrensy)
@@ -24,7 +24,7 @@ public class Converter
         this.yourCurrensy = yourCurrensy;
     }
 
-    // Converts some prefered currensy to uds/eur/rub according to their values
+    // Converts some preferred currency to uds/eur/Rub according to their values or returns 'null'
     public double? Convert(Currensy? to, double? yourCurrensy)
     {
         double? result = null;
@@ -32,18 +32,18 @@ public class Converter
         {
             switch (to)
             {
-                case Currensy.usd:
+                case Currensy.Usd:
                     result = yourCurrensy / usd; break;
-                case Currensy.eur:
+                case Currensy.Eur:
                     result = yourCurrensy / eur; break;
-                case Currensy.rub:
+                case Currensy.Rub:
                     result = yourCurrensy / rub; break;
             }
         } 
         return (result);
     }
 
-    // Converts usd/eur/rub back to some prefered currency according to their values
+    // Converts usd/eur/Rub back to some preferred currency according to their value or returns 'null'
     public double? Convert(double? amount, Currensy? of)
     {
         double? result = null;
@@ -51,11 +51,11 @@ public class Converter
         {
             switch (of)
             {
-                case Currensy.usd:
+                case Currensy.Usd:
                     result = usd * amount; break;
-                case Currensy.eur:
+                case Currensy.Eur:
                     result = eur * amount; break;
-                case Currensy.rub:
+                case Currensy.Rub:
                     result = rub * amount; break;
 
             }

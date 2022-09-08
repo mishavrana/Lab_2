@@ -6,7 +6,7 @@ namespace lab_2 {
         private static int? tuskNumber = null;
         private static Currensy? currensy = null;
         private static double? sum = null;
-        private static Converter converter = new Converter
+        private static Converter uahConverter = new Converter
         (
             usdValue: 36.91,
             eurValue: 36.65,
@@ -17,8 +17,8 @@ namespace lab_2 {
         static void Main(string[] args) 
         {
             Console.WriteLine("Choose the financial operation");
-            Console.WriteLine("1 - Convert UAH to usd/eur/rub");
-            Console.WriteLine("2 - Convert usd/eur/rub to {0}", converter.YourCurrensy);
+            Console.WriteLine("1 - Convert UAH to usd/eur/Rub");
+            Console.WriteLine("2 - Convert usd/eur/Rub to {0}", uahConverter.YourCurrensy);
 
             while (true)
             {
@@ -50,25 +50,25 @@ namespace lab_2 {
             }
         }
 
-        // Converts to usd/eur/rub from UAH
-        static private void FromUAHConverter()
+        // Converts to usd/eur/Rub from UAH
+        private static void FromUAHConverter()
         {
-            Console.WriteLine("Choose currency to convert in (usd/eur/rub)");
+            Console.WriteLine("Choose currency to convert in (usd/eur/Rub)");
             while (true)
             {
                 string cy = Console.ReadLine()!;
-                if (cy == "usd" | cy == "eur" || cy == "rub")
+                if (cy == "usd" | cy == "eur" || cy == "Rub")
                 {
                     switch (cy)
                     {
                         case "usd":
-                            currensy = Currensy.usd;
+                            currensy = Currensy.Usd;
                             break;
                         case "eur":
-                            currensy = Currensy.eur;
+                            currensy = Currensy.Eur;
                             break;
-                        case "rub":
-                            currensy = Currensy.rub;
+                        case "Rub":
+                            currensy = Currensy.Rub;
                             break;
                     }
                     break;
@@ -81,7 +81,7 @@ namespace lab_2 {
 
             while (true)
             {
-                Console.WriteLine("Enter the amount of money in {0}:", converter.YourCurrensy);
+                Console.WriteLine("Enter the amount of money in {0}:", uahConverter.YourCurrensy);
                 try
                 {
                     sum = double.Parse(Console.ReadLine()!);
@@ -96,30 +96,30 @@ namespace lab_2 {
             // Checked 'currensy' & 'sum' for values 
             if (currensy.HasValue && sum.HasValue)
             {
-                Console.WriteLine(converter.Convert(to: currensy!, sum!));
+                Console.WriteLine(uahConverter.Convert(to: currensy!, sum!));
                 Console.ReadLine();
             }
         }
 
-        // Converts usd/eur/rub to UAH
+        // Converts usd/eur/Rub to UAH
         static private void ToUAHConverter()
         {
-            Console.WriteLine("Enter the currency (usd/eur/rub)");
+            Console.WriteLine("Enter the currency (usd/eur/Rub)");
             while (true)
             {
                 string cy = Console.ReadLine()!;
-                if (cy == "usd" | cy == "eur" || cy == "rub")
+                if (cy == "usd" | cy == "eur" || cy == "Rub")
                 {
                     switch (cy)
                     {
                         case "usd":
-                            currensy = Currensy.usd;
+                            currensy = Currensy.Usd;
                             break;
                         case "eur":
-                            currensy = Currensy.eur;
+                            currensy = Currensy.Eur;
                             break;
-                        case "rub":
-                            currensy = Currensy.rub;
+                        case "Rub":
+                            currensy = Currensy.Rub;
                             break;
                     }
                     break;
@@ -145,7 +145,7 @@ namespace lab_2 {
             // Checked 'sum' & 'currunsy' for values
             if (sum.HasValue && currensy.HasValue)
             {
-                Console.WriteLine(converter.Convert(sum!, of: currensy!));
+                Console.WriteLine(uahConverter.Convert(sum!, of: currensy!));
                 Console.ReadLine();
             } 
         }
