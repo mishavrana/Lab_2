@@ -4,15 +4,15 @@ public class Employee
 {
     private string name;
     private string surname;
-    private int experience;
-    private Jobs job;
+    private int experience = 20;
+    private Jobs job = Jobs.Teacher;
+    private int tax = 12;
 
     public string Name
     {
         get { return name; }
         set { name = value; }
     }
-
     public string Surname
     {
         get { return surname; }
@@ -25,68 +25,90 @@ public class Employee
         set
         {
             experience = value;
-            coutSalatry();
+            CountSalaryAndTax();
         }
     }
-
     public Jobs Job
     {
         get { return job; }
         set
         {
             job = value;
-            coutSalatry();
+            CountSalaryAndTax();
         }
     }
-
-
-    public int coutSalatry()
+    public int Tax
+    {
+        get { return tax; }
+        set
+        {
+            tax = value;
+            CountSalaryAndTax();
+        }
+    }
+    
+    // Calculates salary and charge according to 'job', 'experience' and 'tax'
+    public (int salary, int charge) CountSalaryAndTax()
     {
         int salary = 0;
+
+        // Calculating 'salary'
         switch (experience)
         {
             // for middle
             case > 5 and <= 10:
-                salary.Procents(10); break;
+                salary.PlusProcents(10);
+                break;
             // for senior specialist 
             case > 10 and <= 40:
-                salary.Procents(20); break;
+                salary.PlusProcents(20);
+                break;
             // for veteran 
             case > 40:
-                salary.Procents(30); break;
+                salary.PlusProcents(30);
+                break;
         }
-        
+
         switch (job)
         {
             case Jobs.Director:
-                salary += 30_000; break; 
+                salary += 30_000;
+                break;
             case Jobs.HeadTeacher:
-                salary += 25_000; break; 
+                salary += 25_000;
+                break;
             case Jobs.Teacher:
-                salary += 20_000; break; 
+                salary += 20_000;
+                break;
             case Jobs.Housemaid:
-                salary += 10_000; break; 
+                salary += 10_000;
+                break;
             case Jobs.Security:
-                salary += 10_000; break; 
-            
+                salary += 10_000;
+                break;
+
         }
-        return salary;
+
+        // Calculating 'charge' according to 'salary'
+        int charge = salary.Procents(tax);
+        
+        // Calculating income after charging the tax
+        salary -= charge;
+        return (salary, charge);
     }
+    
     public enum Jobs
     {
         Director,
-        HeadTeacher, 
-        Teacher, 
-        Housemaid, 
+        HeadTeacher,
+        Teacher,
+        Housemaid,
         Security
     }
-
-    public Employee(string name, string surname, int experience, Jobs job)
+    
+    public Employee(string name, string surname)
     {
         this.name = name;
         this.surname = surname;
-        this.experience = experience;
-        this.job = job;
     }
-    
 }
