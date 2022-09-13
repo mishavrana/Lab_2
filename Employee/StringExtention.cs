@@ -1,14 +1,16 @@
-namespace Employee;
-
-public static class StringExtention
+namespace employee
 {
-    public static int PlusProcents(this int integer, int procent)
+    public static class StringExtention
     {
-        return (integer += integer / 100 * procent);
-    }
+        public static int PlusProcents(this int integer, int procent)
+        {
+            return (integer += integer / 100 * procent);
+        }
 
-    public static int Procents(this int integer, int procent)
-    {
-        return (integer * procent / 100);
-    }
+        public static int Procents(this int integer, int procent)
+        {
+            return (integer * procent / 100);
+        }
+    } 
 }
+

@@ -1,6 +1,6 @@
-namespace Employee;
-
-public class Employee
+namespace employee
+{
+    public class Employee
 {
     private string name;
     private string surname;
@@ -112,3 +112,5 @@ public class Employee
         this.surname = surname;
     }
 }
+}
+

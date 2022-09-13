@@ -1,11 +1,11 @@
-﻿using static Converter;
+﻿using Converter = converter.Converter;
+using Currency = converter.Converter.Currency;
 using System;
-using Currensy = Converter.Currensy;
+using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
+
 namespace lab_2 {
     class Programm {
-        private static int? tuskNumber = null;
-        private static Currensy? currensy = null;
-        private static double? sum = null;
         private static Converter uahConverter = new Converter
         (
             usdValue: 36.91,
@@ -14,12 +14,13 @@ namespace lab_2 {
             yourCurrensy: "UAH" 
         );
 
-        static void Main(string[] args) 
+        static void Main(string[] args)
         {
+            int? tuskNumber = null;
             Console.WriteLine("Choose the financial operation");
             Console.WriteLine("1 - Convert UAH to usd/eur/Rub");
             Console.WriteLine("2 - Convert usd/eur/Rub to {0}", uahConverter.YourCurrensy);
-
+            
             while (true)
             {
                 try
@@ -36,7 +37,7 @@ namespace lab_2 {
                     break;
                 }
             }
-
+            
             switch (tuskNumber!)
             {
                 case 1:
@@ -53,29 +54,34 @@ namespace lab_2 {
         // Converts to usd/eur/Rub from UAH
         private static void FromUAHConverter()
         {
-            Console.WriteLine("Choose currency to convert in (usd/eur/Rub)");
+            Currency currency;
+            double sum;
+            Console.WriteLine("Choose currency to convert in (usd/eur/rub)");
             while (true)
             {
                 string cy = Console.ReadLine()!;
-                if (cy == "usd" | cy == "eur" || cy == "Rub")
+                try
                 {
                     switch (cy)
                     {
                         case "usd":
-                            currensy = Currensy.Usd;
+                            currency = Currency.Usd;
                             break;
                         case "eur":
-                            currensy = Currensy.Eur;
+                            currency = Currency.Eur;
                             break;
-                        case "Rub":
-                            currensy = Currensy.Rub;
+                        case "rub":
+                            currency = Currency.Rub;
                             break;
+                        default:
+                            throw new NullReferenceException("Non existing currency");;
                     }
+
                     break;
                 }
-                else
+                catch(Exception ex)
                 {
-                    Console.WriteLine("Enter the valid currensy");
+                    Console.WriteLine(ex.Message);
                 }
             }
 
@@ -85,69 +91,67 @@ namespace lab_2 {
                 try
                 {
                     sum = double.Parse(Console.ReadLine()!);
-                    break;
+                    if (sum > 0)
+                        break;
+                    throw new Exception("Can't convert to 'double'");
                 }
-                catch
+                catch(Exception ex)
                 {
-                    Console.WriteLine("Can't convert to 'double'");
+                    Console.WriteLine(ex.Message);
                 }
             }
-
-            // Checked 'currensy' & 'sum' for values 
-            if (currensy.HasValue && sum.HasValue)
-            {
-                Console.WriteLine(uahConverter.Convert(to: currensy!, sum!));
-                Console.ReadLine();
-            }
+            Console.WriteLine(uahConverter.Convert(to: currency, sum));
+            Console.ReadLine();
         }
 
-        // Converts usd/eur/Rub to UAH
-        static private void ToUAHConverter()
+        // Converts usd/eur/rub to UAH
+        private static void ToUAHConverter()
         {
-            Console.WriteLine("Enter the currency (usd/eur/Rub)");
+            Currency currency;
+            double sum;
+            Console.WriteLine("Enter the currency (usd/eur/rub)");
             while (true)
             {
                 string cy = Console.ReadLine()!;
-                if (cy == "usd" | cy == "eur" || cy == "Rub")
-                {
+                try {
                     switch (cy)
                     {
                         case "usd":
-                            currensy = Currensy.Usd;
+                            currency = Currency.Usd;
                             break;
                         case "eur":
-                            currensy = Currensy.Eur;
+                            currency = Currency.Eur;
                             break;
-                        case "Rub":
-                            currensy = Currensy.Rub;
+                        case "rub":
+                            currency = Currency.Rub;
                             break;
+                        default:
+                            throw new NullReferenceException("Non existing currency");
                     }
                     break;
                 }
-                else
+                catch(Exception ex)
                 {
-                    Console.WriteLine("Enter the valid currensy");
+                    Console.WriteLine(ex.Message);
                 }
             }
             while (true)
             {
-                Console.WriteLine("Enter the amount of money is {0}:", currensy);
+                Console.WriteLine("Enter the amount of money is {0}:", currency);
                 try
                 {
                     sum = double.Parse(Console.ReadLine()!);
-                    break;
+                    if (sum > 0)
+                        break;
+                    throw new Exception("Can't convert to 'double'");
                 }
-                catch
+                catch(Exception ex)
                 {
-                    Console.WriteLine("Can't convert to 'double'");
+                    Console.WriteLine(ex.Message);
                 }
             }
-            // Checked 'sum' & 'currunsy' for values
-            if (sum.HasValue && currensy.HasValue)
-            {
-                Console.WriteLine(uahConverter.Convert(sum!, of: currensy!));
-                Console.ReadLine();
-            } 
+            Console.WriteLine(uahConverter.Convert(sum, of: currency));
+            Console.ReadLine();
         }
     }
 }

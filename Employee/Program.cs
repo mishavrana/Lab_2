@@ -1,4 +1,5 @@
-﻿namespace Employee
+﻿using Employee = employee.Employee; 
+namespace lab_2
 {
     static class Program
     {

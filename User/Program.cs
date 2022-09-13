@@ -1,4 +1,5 @@
-﻿namespace user
+﻿using User = user.User;
+namespace lab_2
 {
     class Program 
     {
@@ -24,4 +25,7 @@
             Console.WriteLine($"Date of signing the form: {user.DateOfSinghningTheForm}");
         }
     }
-}
+} 
+
+
+ 
