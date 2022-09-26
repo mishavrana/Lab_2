@@ -1,0 +1,15 @@
+/Users/mishavrana/Projects/Lab_2/User/bin/Debug/net6.0/User
+/Users/mishavrana/Projects/Lab_2/User/bin/Debug/net6.0/User.deps.json
+/Users/mishavrana/Projects/Lab_2/User/bin/Debug/net6.0/User.runtimeconfig.json
+/Users/mishavrana/Projects/Lab_2/User/bin/Debug/net6.0/User.dll
+/Users/mishavrana/Projects/Lab_2/User/bin/Debug/net6.0/User.pdb
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.csproj.AssemblyReference.cache
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.AssemblyInfoInputs.cache
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.AssemblyInfo.cs
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.csproj.CoreCompileInputs.cache
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.dll
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/refint/User.dll
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.pdb
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/User.genruntimeconfig.cache
+/Users/mishavrana/Projects/Lab_2/User/obj/Debug/net6.0/ref/User.dll

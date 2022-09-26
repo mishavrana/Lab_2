@@ -1,0 +1,15 @@
+/Users/mishavrana/Projects/Lab_2/Employee/bin/Debug/net6.0/Employee
+/Users/mishavrana/Projects/Lab_2/Employee/bin/Debug/net6.0/Employee.deps.json
+/Users/mishavrana/Projects/Lab_2/Employee/bin/Debug/net6.0/Employee.runtimeconfig.json
+/Users/mishavrana/Projects/Lab_2/Employee/bin/Debug/net6.0/Employee.dll
+/Users/mishavrana/Projects/Lab_2/Employee/bin/Debug/net6.0/Employee.pdb
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.csproj.AssemblyReference.cache
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.AssemblyInfoInputs.cache
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.AssemblyInfo.cs
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.csproj.CoreCompileInputs.cache
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.dll
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/refint/Employee.dll
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.pdb
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/Employee.genruntimeconfig.cache
+/Users/mishavrana/Projects/Lab_2/Employee/obj/Debug/net6.0/ref/Employee.dll

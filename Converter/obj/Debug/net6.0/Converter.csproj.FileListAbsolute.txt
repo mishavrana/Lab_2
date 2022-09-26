@@ -1,0 +1,15 @@
+/Users/mishavrana/Projects/Lab_2/Converter/bin/Debug/net6.0/Converter
+/Users/mishavrana/Projects/Lab_2/Converter/bin/Debug/net6.0/Converter.deps.json
+/Users/mishavrana/Projects/Lab_2/Converter/bin/Debug/net6.0/Converter.runtimeconfig.json
+/Users/mishavrana/Projects/Lab_2/Converter/bin/Debug/net6.0/Converter.dll
+/Users/mishavrana/Projects/Lab_2/Converter/bin/Debug/net6.0/Converter.pdb
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.csproj.AssemblyReference.cache
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.AssemblyInfoInputs.cache
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.AssemblyInfo.cs
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.csproj.CoreCompileInputs.cache
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.dll
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/refint/Converter.dll
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.pdb
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/Converter.genruntimeconfig.cache
+/Users/mishavrana/Projects/Lab_2/Converter/obj/Debug/net6.0/ref/Converter.dll
